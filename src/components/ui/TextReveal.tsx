@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const container = {
   hidden: { opacity: 0 },
@@ -32,13 +33,18 @@ export default function TextReveal({
   className?: string;
 }) {
   const words = text.split(" ");
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
 
   return (
     <motion.div
+      ref={ref} 
       className={`flex flex-wrap overflow-hidden ${className}`}
       variants={container}
       initial="hidden"
-      animate="visible"
+      animate={inView ? "visible" : "hidden"} 
     >
       {words.map((word, idx) => (
         <motion.span key={idx} variants={child} className="mr-2">
