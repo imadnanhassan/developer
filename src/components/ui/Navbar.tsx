@@ -41,7 +41,12 @@ const Navbar: React.FC = () => {
               to="/"
               className="text-2xl font-bold text-white tracking-wider select-none"
             >
-              <span className="text-primary-900">Adnan</span>Hassan
+              {/* <span className="text-primary-900">Adnan</span>Hassan */}
+              <img
+                src="https://codehaven.io/wp-content/uploads/2024/03/adnan-hassan.png"
+                alt=""
+                className="h-full w-[150px] "
+              />
             </Link>
           </motion.div>
 

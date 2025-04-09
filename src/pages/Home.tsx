@@ -21,7 +21,7 @@ const Home: React.FC = () => {
           <AboutSection />
         </Section>
 
-        <Section id="services" color="bg-black" onInView={setBgColor}>
+        <Section id="services" color="bg-emerald-900" onInView={setBgColor}>
         <HeroParallaxDemo />
         </Section>
 
