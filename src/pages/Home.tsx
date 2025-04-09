@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         </Section>
 
         <Section id="about" color="bg-purple-900" onInView={setBgColor}>
-          <h1 className="text-white text-5xl">About Us</h1>
+          <h1 className="text-white text-5xl ">About Us</h1>
         </Section>
 
         <Section id="services" color="bg-emerald-900" onInView={setBgColor}>

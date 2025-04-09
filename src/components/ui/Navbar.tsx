@@ -24,11 +24,13 @@ const Navbar: React.FC = () => {
     <nav>
       <div
         className={cn(
-          "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-          scrolled ? "bg-white/20 backdrop-blur-lg shadow-lg" : "bg-transparent"
+          "fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out",
+          scrolled
+            ? "bg-white/20 backdrop-blur-lg shadow-lg px-4 md:px-28 "
+            : "bg-transparent"
         )}
       >
-        <div className="max-w-[1600px] mx-auto px-[32px] py-5 flex justify-between items-center ">
+        <div className="max-w-full md:max-w-[1600px] mx-auto px-4 md:px-8 py-3 md:py-5 flex justify-between items-center">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -86,7 +88,7 @@ const Navbar: React.FC = () => {
         className="md:hidden fixed bottom-0 left-0 w-full bg-[#131313] z-50 rounded-t-3xl border-t border-t-white/10 shadow-lg backdrop-blur-md"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(201, 243, 28, 0.1), #131313 20%)", // Subtle green gradient at the top
+            "linear-gradient(to bottom, rgba(201, 243, 28, 0.1), #131313 20%)",
         }}
       >
         <div className="flex justify-center items-center px-10 py-4 gap-6">

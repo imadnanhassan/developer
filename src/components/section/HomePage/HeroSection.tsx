@@ -1,4 +1,6 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import { Button } from "@/components/ui/moving-border";
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -30,7 +32,7 @@ const Counter = ({ target }: CounterProps) => {
 const HeroSection: React.FC = () => {
   return (
     <>
-      <BackgroundBeamsWithCollision className="bg-transparent h-full adnan_container px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-16">
+      <BackgroundBeamsWithCollision className="bg-transparent h-full adnan_container px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-16 mt-32">
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full gap-10">
           {/* Left Section */}
           <div className="flex-1 text-center lg:text-left space-y-6 order-2 lg:order-1">
@@ -54,10 +56,16 @@ const HeroSection: React.FC = () => {
               <button className="bg-[#C4F000] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#a3c900] transition">
                 Hire Me
               </button>
-              <button className="relative border border-[#C4F000] text-[#C4F000] font-semibold py-3 px-6 rounded-full hover:bg-[#C4F000] hover:text-black transition overflow-hidden group">
+              {/* <button className="relative border border-[#C4F000] text-[#C4F000] font-semibold py-3 px-6 rounded-full hover:bg-[#C4F000] hover:text-black transition overflow-hidden group">
                 <span className="relative z-10">Download Resume</span>
                 <span className="absolute inset-0 border-2 border-transparent rounded-full group-hover:border-[#C4F000] animate-border-glow"></span>
-              </button>
+              </button> */}
+              <Button
+                borderRadius="1.75rem"
+                className="relative border bg-transparent border-[#C4F000] text-[#C4F000] font-semibold  rounded-full hover:bg-[#C4F000] hover:text-black transition overflow-hidden group"
+              >
+                Download Resume
+              </Button>
             </div>
           </div>
 
