@@ -2,6 +2,8 @@ import AnimatedLines from "@/components/ui/AnimatedLines";
 import HeroSection from "@/components/section/HomePage/HeroSection";
 import Section from "@/components/ui/Section";
 import { useState } from "react";
+import AboutSection from "@/components/section/HomePage/AboutSection";
+import { HeroParallaxDemo } from "@/components/section/HomePage/HeroParallaxDemo";
 
 const Home: React.FC = () => {
   const [bgColor, setBgColor] = useState<string>("bg-black");
@@ -16,11 +18,11 @@ const Home: React.FC = () => {
         </Section>
 
         <Section id="about" color="bg-purple-900" onInView={setBgColor}>
-          <h1 className="text-white text-5xl ">About Us</h1>
+          <AboutSection />
         </Section>
 
-        <Section id="services" color="bg-emerald-900" onInView={setBgColor}>
-          <h1 className="text-white text-5xl">Our Services</h1>
+        <Section id="services" color="bg-black" onInView={setBgColor}>
+        <HeroParallaxDemo />
         </Section>
 
         <Section id="contact" color="bg-pink-800" onInView={setBgColor}>
