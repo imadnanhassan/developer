@@ -1,7 +1,7 @@
 import "./App.css";
 import { motion } from "framer-motion";
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-4 text-center">
@@ -11,7 +11,7 @@ function App() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-extrabold mb-4"
         >
-          Hi, I’m <span className="text-pink-500">[Adnan Hassan]</span>
+          Hi, I'm <span className="text-pink-500">[Adnan Hassan]</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -27,11 +27,11 @@ function App() {
           whileTap={{ scale: 0.95 }}
           className="inline-block px-6 py-3 bg-pink-600 text-white rounded-full font-semibold shadow-lg hover:bg-pink-700 transition"
         >
-          Let’s Connect
+          Let's Connect
         </motion.a>
       </section>
     </>
   );
-}
+};
 
 export default App;

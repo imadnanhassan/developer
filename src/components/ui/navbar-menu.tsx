@@ -1,6 +1,29 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
+
+interface MenuItemProps {
+  setActive: (item: string) => void;
+  active: string | null;
+  item: string;
+  children?: React.ReactNode;
+}
+
+interface MenuProps {
+  setActive: (item: string | null) => void;
+  children: React.ReactNode;
+}
+
+interface ProductItemProps {
+  title: string;
+  description: string;
+  href: string;
+  src: string;
+}
+
+interface HoveredLinkProps extends LinkProps {
+  children: React.ReactNode;
+}
 
 const transition = {
   type: "spring",
@@ -11,16 +34,11 @@ const transition = {
   restSpeed: 0.001,
 };
 
-export const MenuItem = ({
+export const MenuItem: React.FC<MenuItemProps> = ({
   setActive,
   active,
   item,
   children,
-}: {
-  setActive: (item: string) => void;
-  active: string | null;
-  item: string;
-  children?: React.ReactNode;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative ">
@@ -58,12 +76,9 @@ export const MenuItem = ({
   );
 };
 
-export const Menu = ({
+export const Menu: React.FC<MenuProps> = ({
   setActive,
   children,
-}: {
-  setActive: (item: string | null) => void;
-  children: React.ReactNode;
 }) => {
   return (
     <nav
@@ -75,16 +90,11 @@ export const Menu = ({
   );
 };
 
-export const ProductItem = ({
+export const ProductItem: React.FC<ProductItemProps> = ({
   title,
   description,
   href,
   src,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  src: string;
 }) => {
   return (
     <Link to={href} className="flex space-x-2">
@@ -107,7 +117,7 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink: React.FC<HoveredLinkProps> = ({ children, ...rest }) => {
   return (
     <Link
       {...rest}

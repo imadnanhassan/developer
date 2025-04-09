@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const StickyNavbar = () => {
+
+
+const StickyNavbar: React.FC = () => {
   const location = useLocation();
-  const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [activeLink, setActiveLink] = useState<string>("Home");
 
   useEffect(() => {
     const handleScroll = () => {

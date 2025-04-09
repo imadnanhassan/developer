@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import StickyNavbar from "../ui/sticky-navbar";
+import Navbar from "../ui/Navbar";
 
-const RootLayout = () => {
+const RootLayout: React.FC = () => {
   return (
     <div className="w-full min-h-screen !bg-[#131313]">
       <div className="flex flex-col items-center w-full h-full">
-        <StickyNavbar />
+        <Navbar />
 
         <main className="flex-1 w-full">
           <Outlet />

@@ -1,11 +1,10 @@
 import AnimatedLines from "@/components/ui/AnimatedLines";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
-import HeroSection from "@/components/ui/HeroSection";
+import HeroSection from "@/components/section/HomePage/HeroSection";
 import Section from "@/components/ui/Section";
 import { useState } from "react";
 
-export default function Home() {
-  const [bgColor, setBgColor] = useState("bg-black");
+const Home: React.FC = () => {
+  const [bgColor, setBgColor] = useState<string>("bg-black");
 
   return (
     <>
@@ -30,4 +29,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

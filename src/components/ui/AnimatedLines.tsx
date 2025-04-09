@@ -1,19 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const AnimatedLines = () => {
-  const lineVariants = {
-    animate: {
-      x: [-10, 10, -10],
-      transition: {
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
+const lineVariants: Variants = {
+  animate: {
+    x: [-10, 10, -10],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut",
     },
-  };
+  },
+};
 
-  const linePositions = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95];
+const linePositions: number[] = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95];
 
+const AnimatedLines: React.FC = () => {
   return (
     <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
       {linePositions.map((pos, index) => (
