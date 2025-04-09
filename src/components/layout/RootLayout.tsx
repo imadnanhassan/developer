@@ -4,10 +4,10 @@ import Navbar from "../ui/Navbar";
 const RootLayout: React.FC = () => {
   return (
     <div className="w-full min-h-screen !bg-[#131313]">
-      <div className="flex flex-col items-center w-full h-full">
+      <>
         <Navbar />
 
-        <main className="flex-1 w-full">
+        <main className=" w-full">
           <Outlet />
         </main>
 
@@ -42,7 +42,7 @@ const RootLayout: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
+      </>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Section = ({ id, color, onInView, children }: SectionProps) => {
     <section
       id={id}
       ref={ref}
-      className="min-h-screen flex items-center justify-center transition-colors duration-500 z-10 relative"
+      className=" transition-colors duration-500 z-10 "
     >
       {children}
     </section>

@@ -1,138 +1,109 @@
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { Button } from "@/components/ui/moving-border";
-
+import TooltipWord from "@/components/ui/TooltipWord";
+import StatsSection from "@/components/ui/StatsSection";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import TextReveal from "@/components/ui/TextReveal";
 
-interface CounterProps {
-  target: number;
-}
-
-const Counter = ({ target }: CounterProps) => {
-  const [count, setCount] = useState<number>(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => {
-        if (prevCount < target) {
-          return prevCount + 1;
-        } else {
-          clearInterval(interval);
-          return target;
-        }
-      });
-    }, 30);
-
-    return () => clearInterval(interval);
-  }, [target]);
-
-  return <motion.span>{count}</motion.span>;
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
 };
 
 const HeroSection: React.FC = () => {
   return (
     <>
-      <BackgroundBeamsWithCollision className="bg-transparent h-full adnan_container px-4 sm:px-6 md:px-10 lg:px-20 xl:px-32 py-16 mt-32">
-        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full gap-10">
-          {/* Left Section */}
-          <div className="flex-1 text-center lg:text-left space-y-6 order-2 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Hello, I'm <br />
-              <span className="text-[#C4F000]">Adnan Hassan</span>
-            </h1>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
-              SEO | MERN | WordPress{" "}
-              <span className="text-[#C4F000]">Developer</span>
-            </h2>
-            <p className="text-gray-400 max-w-md mx-auto lg:mx-0">
-              I am a skilled developer with expertise in SEO, the MERN stack
-              (MongoDB, Express.js, React, Node.js), and WordPress. I optimize
-              websites for top search engine rankings, create dynamic web
-              applications, and develop custom WordPress themes and plugins to
-              deliver exceptional digital experiences tailored to your business
-              needs.
-            </p>
-            <div className="flex justify-center lg:justify-start space-x-4">
-              <button className="bg-[#C4F000] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#a3c900] transition">
-                Hire Me
-              </button>
-              {/* <button className="relative border border-[#C4F000] text-[#C4F000] font-semibold py-3 px-6 rounded-full hover:bg-[#C4F000] hover:text-black transition overflow-hidden group">
-                <span className="relative z-10">Download Resume</span>
-                <span className="absolute inset-0 border-2 border-transparent rounded-full group-hover:border-[#C4F000] animate-border-glow"></span>
-              </button> */}
-              <Button
-                borderRadius="1.75rem"
-                className="relative border bg-transparent border-[#C4F000] text-[#C4F000] font-semibold  rounded-full hover:bg-[#C4F000] hover:text-black transition overflow-hidden group"
-              >
-                Download Resume
-              </Button>
-            </div>
-          </div>
+      <BackgroundBeamsWithCollision className="bg-transparent w-full h-screen overflow-hidden relative pt-40">
+        <div className="bg-transparent adnan_container mx-auto  ">
+          <div className="flex flex-col items-center gap-5 lg:flex-row !py-40 ">
+            <motion.div
+              className="text-center lg:text-left flex-1 flex-wrap justify-center lg:justify-start gap-6 mt-10 lg:mt-0 w-full space-y-6"
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              custom={1}
+            >
+              <div className="text-center lg:text-left flex-1 flex-wrap justify-center lg:justify-start gap-6 mt-10 lg:mt-0 w-full space-y-6 ">
+                <div className="text-center lg:text-left space-y-0 leading-tight">
+                  <p>
+                    <TextReveal
+                      text="Hello, I'm"
+                      className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-500"
+                    />
+                  </p>
+                  <p>
+                    <TextReveal
+                      text="Adnan Hassan"
+                      className="text-3xl sm:text-4xl lg:text-4xl font-bold text-[#C4F000]"
+                    />
+                  </p>
+                </div>
 
-          {/* Center Image */}
-          <div className="flex-1 flex justify-center order-1 lg:order-2 relative bg-transparent">
-            <div className="relative hidden sm:block w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px] h-[250px] md:h-[400px] lg:h-[500px] 2xl:h-[650px] rounded-b-[200px] overflow-hidden">
-              <div className="absolute overflow-hidden">
+                <h2 className="text-xl sm:text-2xl lg:text-2xl font-semibold text-white flex flex-wrap gap-1">
+                  <TooltipWord word="SEO" tooltip="SEO Expert" />
+                  |
+                  <TooltipWord word="MERN" tooltip="MERN Developer" />
+                  |
+                  <TooltipWord
+                    word="WordPress"
+                    tooltip="WordPress Specialist"
+                  />
+                </h2>
+
+                <p>
+                  <TextReveal
+                    text="I am a skilled developer with expertise in SEO, the MERN stack (MongoDB, Express.js, React, Node.js), and WordPress. I optimize websites for top search engine rankings, create dynamic web applications, and develop custom WordPress themes and plugins to deliver exceptional digital experiences tailored to your business needs."
+                    className="text-gray-400 max-w-md mx-auto lg:mx-0"
+                  />
+                </p>
+                <div className="flex justify-center lg:justify-start space-x-4">
+                  <button className="bg-[#C4F000] text-black font-semibold py-3 px-6 rounded-full hover:bg-[#a3c900] transition">
+                    Hire Me
+                  </button>
+
+                  <Button
+                    borderRadius="1.75rem"
+                    className="relative border bg-transparent border-[#C4F000] text-[#C4F000] font-semibold  rounded-full hover:bg-[#C4F000] hover:text-black transition overflow-hidden group"
+                  >
+                    Download Resume
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              custom={2}
+              className="flex-1 flex-wrap justify-center lg:justify-end gap-6 w-full max-w-3xl order-2 bg-transparent"
+            >
+              <div className="relative hidden sm:block w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px] h-[250px] md:h-[400px] lg:h-[500px] 2xl:h-[650px] rounded-b-[200px] overflow-hidden">
                 <img
                   src="https://codehaven.io/wp-content/uploads/2024/03/adnan-hassan.jpg"
                   alt="Adnan Hassan"
                   className="w-full h-full object-cover grayscale bg-transparent"
                 />
               </div>
-            </div>
-          </div>
+            </motion.div>
 
-          {/* Right Stats */}
-          <div className="flex-1 w-full flex justify-center lg:justify-end order-3 mt-8 lg:mt-0">
-            <div className="mt-10 bg-neutral-900/80 text-center p-8 sm:p-12 md:p-14 lg:p-16 rounded-3xl space-y-8 text-lime-400 shadow-xl shadow-lime-400/20 hover:shadow-lime-400/30 transition-all duration-300">
-              {/* Experience */}
-              <div className="transform hover:scale-105 transition-transform duration-300">
-                <p className="text-4xl font-bold">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                  >
-                    <Counter target={4} />+
-                  </motion.div>
-                </p>
-                <p className="text-sm text-neutral-300 mt-2">
-                  Years Of Experience
-                </p>
-              </div>
-
-              {/* Projects */}
-              <div className="transform hover:scale-105 transition-transform duration-300">
-                <p className="text-4xl font-bold">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                  >
-                    <Counter target={40} />+
-                  </motion.div>
-                </p>
-                <p className="text-sm text-neutral-300 mt-2">
-                  Projects Completed
-                </p>
-              </div>
-
-              {/* Client Satisfaction */}
-              <div className="transform hover:scale-105 transition-transform duration-300">
-                <p className="text-4xl font-bold">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                  >
-                    <Counter target={98} />%
-                  </motion.div>
-                </p>
-                <p className="text-sm text-neutral-300 mt-2">
-                  Client Satisfaction
-                </p>
-              </div>
-            </div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              custom={3}
+              className="flex-1 w-full flex justify-center lg:justify-end order-3 mt-8 lg:mt-0"
+            >
+              <StatsSection />
+            </motion.div>
           </div>
         </div>
       </BackgroundBeamsWithCollision>
