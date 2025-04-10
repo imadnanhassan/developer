@@ -8,7 +8,7 @@ const fadeUp = {
 
 const ExperienceSection = () => {
   return (
-    <section className="bg-[#070707] rounded h-screen  text-white py-20 px-4 md:px-10 lg:px-24">
+    <section className="bg-[#070707] rounded h-full  text-white py-20 px-4 md:px-10 lg:px-24">
       <div className="adnan_container mx-auto  flex flex-col lg:flex-row items-start gap-10">
         {/* Left Side Logo */}
         <motion.div
@@ -39,7 +39,7 @@ const ExperienceSection = () => {
         >
           <motion.p className="text-gray-400 mb-2">My Resume</motion.p>
           <motion.h2 className="text-4xl font-bold mb-10">
-            Real <span className="text-lime-400">Problem Solutions</span>{" "}
+            Real <span className="text-lime-400">Problem Solutions</span> <br />
             Experience
           </motion.h2>
           <ExperienceCard />

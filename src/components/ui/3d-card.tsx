@@ -87,7 +87,7 @@ export const CardBody = ({ children, className, style }: CardProps) => {
         "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
         className
       )}
-      style={style}
+       style={style}
     >
       {children}
     </div>
