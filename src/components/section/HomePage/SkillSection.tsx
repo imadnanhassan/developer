@@ -51,11 +51,7 @@ export const SkillSection = () => {
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
+            transition={{ duration: 0.6 }}
         >
           <section className="bg-[#070707] rounded h-full  text-white py-40 px-4  ">
             <div className=" absolute inset-0 bg-gradient-radial from-[#c9f31c22] via-[#00000088] to-[#000000] opacity-20 pointer-events-none" />
