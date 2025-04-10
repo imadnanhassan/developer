@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <div className=" text-white bg-[#070707] rounded h-screen flex items-center justify-center ">
+    <div className=" text-white bg-[#070707] rounded h-full lg:py-40 py-32 flex items-center justify-center ">
       <div className="flex flex-col gap-5 md:flex-row items-center justify-between adnan_container mx-auto px-4 py-10">
         <div className="sm:w-[600px] md:w-[600px] lg:w-[750px] xl:w-[1400px] w-full">
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">
@@ -45,7 +45,7 @@ const AboutSection: React.FC = () => {
           </div>
 
           <div className="bg-[#1F1F1F] rounded-2xl py-5 px-4 flex flex-col md:flex-row justify-between items-center gap-4 border border-[#C9F31C] max-w-150 ">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-full">
               <Mail
                 className="bg-[#C9F31C] text-[#1F1F1F] rounded-full p-[10px]"
                 size={40}
@@ -55,7 +55,7 @@ const AboutSection: React.FC = () => {
                 <p className="text-white">abulhassan.dev@gmail.com</p>
               </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-full">
               <Phone
                 className="bg-[#C9F31C] text-[#1F1F1F] rounded-full p-[10px]"
                 size={40}

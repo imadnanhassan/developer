@@ -35,7 +35,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-16 px-4 md:px-12 bg-[#0d0d0d] text-white">
+    <section className="py-40 px-4 md:px-12 bg-[#0d0d0d] text-white">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <p className="text-sm uppercase tracking-widest text-neutral-400">
           Popular Services

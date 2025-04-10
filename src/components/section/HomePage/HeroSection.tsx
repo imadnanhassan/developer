@@ -21,9 +21,9 @@ const fadeUp = {
 const HeroSection: React.FC = () => {
   return (
     <>
-      <BackgroundBeamsWithCollision className="bg-transparent w-full h-screen overflow-hidden relative pt-40">
+      <BackgroundBeamsWithCollision className="bg-transparent w-full h-full overflow-hidden relative lg:pt-40">
         <div className="bg-transparent adnan_container mx-auto  ">
-          <div className="flex flex-col items-center gap-5 lg:flex-row !py-40 ">
+          <div className="flex flex-col items-center gap-5 lg:flex-row !py-20 ">
             <motion.div
               className="text-center lg:text-left flex-1 flex-wrap justify-center lg:justify-start gap-6 mt-10 lg:mt-0 w-full space-y-6"
               initial="hidden"

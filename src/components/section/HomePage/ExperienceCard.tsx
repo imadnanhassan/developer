@@ -51,7 +51,7 @@ export function ExperienceCard() {
     <>
       <div className="inter-var grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {experiences.map((experience, index) => (
-          <CardContainer key={index} className="md:w-[350px] sm:w[300px]  lg:w-full">
+          <CardContainer key={index} className="md:w-[350px] w-full sm:w[300px]  lg:w-full">
             <CardBody
               className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full sm:w-[30rem] h-auto rounded-xl p-6 border"
               style={{
