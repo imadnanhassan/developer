@@ -26,7 +26,7 @@ const PricingCard: React.FC<{ plan: PricingPlan }> = ({ plan }) => (
     >
       {/* Popular Badge */}
       {plan.isPopular && (
-        <span className="absolute top-0 right-0 bg-[#C9F31C] text-white text-sm font-semibold px-4 py-1 rounded-bl-lg">
+        <span className="absolute top-0 right-0 bg-[#C9F31C] text-black text-sm font-semibold px-4 py-1 rounded-bl-lg">
           Popular
         </span>
       )}
