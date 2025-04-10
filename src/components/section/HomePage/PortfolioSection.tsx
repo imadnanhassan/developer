@@ -1,6 +1,6 @@
 import { HeroParallax } from "@/components/ui/hero-parallax";
 
-export function HeroParallaxDemo() {
+export function PortfolioSection() {
   return <HeroParallax products={products} />;
 }
 // eslint-disable-next-line react-refresh/only-export-components
@@ -65,5 +65,4 @@ export const products = [
     thumbnail:
       "https://codehaven.io/wp-content/uploads/2024/11/Minimalist-Neutral-Multi-Device-Computer-Mockup-Website-Launch-Instagram-Post-3.jpg",
   },
- 
 ];
