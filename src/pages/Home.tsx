@@ -8,6 +8,7 @@ import ExperienceSection from "@/components/section/HomePage/ExperienceSection";
 import { ServicesSection } from "@/components/section/HomePage/ServiceSection";
 import { SkillSection } from "@/components/section/HomePage/SkillSection";
 import PricingSection from "@/components/section/HomePage/PricingSection";
+import Testimonials from "@/components/section/HomePage/Testimonials";
 
 const Home: React.FC = () => {
   const [bgColor, setBgColor] = useState<string>("bg-black");
@@ -43,7 +44,7 @@ const Home: React.FC = () => {
         </Section>
 
         <Section id="testimonials" color="bg-black" onInView={setBgColor}>
-          <h1 className="text-white text-5xl">Testimonials</h1>
+          <Testimonials/>
         </Section>
         <Section id="blog" color="bg-black" onInView={setBgColor}>
           <h1 className="text-white text-5xl">Blog</h1>
