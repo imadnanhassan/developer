@@ -5,6 +5,7 @@ import { useState } from "react";
 import AboutSection from "@/components/section/HomePage/AboutSection";
 import { PortfolioSection } from "@/components/section/HomePage/PortfolioSection";
 import ExperienceSection from "@/components/section/HomePage/ExperienceSection";
+import { ServicesSection } from "@/components/section/HomePage/ServiceSection";
 
 const Home: React.FC = () => {
   const [bgColor, setBgColor] = useState<string>("bg-black");
@@ -29,7 +30,7 @@ const Home: React.FC = () => {
         </Section>
 
         <Section id="services" color="bg-emerald-900" onInView={setBgColor}>
-          <h1 className="text-white text-5xl">Services</h1>
+          <ServicesSection />
         </Section>
 
         <Section id="pricing" color="bg-black" onInView={setBgColor}>

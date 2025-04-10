@@ -1,5 +1,5 @@
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { ArrowUpRight } from "lucide-react";
+import { MousePointerClick } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface Experience {
@@ -88,7 +88,8 @@ export function ExperienceCard() {
                   target="__blank"
                   className="px-2 py-2 rounded-full text-xs font-normal text-white bg-black hover:bg-[#C9F31C] hover:text-black transition-colors duration-200 ease-in-out"
                 >
-                  <ArrowUpRight />
+                            {/* <ArrowUpRight /> */}
+                            <MousePointerClick/>
                 </CardItem>
               </div>
             </CardBody>
