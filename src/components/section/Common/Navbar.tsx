@@ -78,13 +78,15 @@ const Navbar: React.FC = () => {
           </motion.ul>
 
           {/* CTA Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="ml-4 px-5 py-2 rounded-full bg-[#C9F31C] hover:bg-[#bde91f] text-black font-semibold text-sm shadow-xl transition"
-          >
-            Let's Talk
-          </motion.button>
+          <Link to={"/contact"}>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="ml-4 cursor-pointer px-5 py-2 rounded-full bg-[#C9F31C] hover:bg-[#bde91f] text-black font-semibold text-sm shadow-xl transition"
+            >
+              Let's Talk
+            </motion.button>
+          </Link>
         </div>
       </div>
 
@@ -178,8 +180,6 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
 
 // import { mobileNavLinks, navLinks } from "@/data/navLinks";
 // import { cn } from "@/lib/utils";
@@ -330,7 +330,7 @@ export default Navbar;
 //                   position: relative;
 //                   z-index: 1;
 //                 }
-      
+
 //                 .animated-border::before {
 //                   content: '';
 //                   position: absolute;
@@ -343,7 +343,7 @@ export default Navbar;
 //                   z-index: -1;
 //                   animation: pulse 2s ease-in-out infinite; /* Pulse animation instead of rotate */
 //                 }
-      
+
 //                 @keyframes pulse {
 //                   0% {
 //                     opacity: 0.3;
