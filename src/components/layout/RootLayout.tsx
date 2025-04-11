@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../section/Common/Navbar";
 import Footer from "../section/Common/Footer";
+import { ScrollToTopButton } from "../ui/ScrollToTopButton";
 
 const RootLayout: React.FC = () => {
   return (
@@ -13,6 +14,8 @@ const RootLayout: React.FC = () => {
         </main>
 
         <Footer />
+
+        <ScrollToTopButton/>
       </>
     </div>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Lenis from "@studio-freight/lenis";
+import { useState } from "react";
 import AnimatedLines from "@/components/ui/AnimatedLines";
 import Section from "@/components/ui/Section";
 import HeroSection from "@/components/section/HomePage/HeroSection";
@@ -17,25 +16,6 @@ import ContactSection from "@/components/section/HomePage/ContactSection";
 
 const Home: React.FC = () => {
   const [bgColor, setBgColor] = useState<string>("bg-black");
-
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.5, 
-      easing: (t) => t, 
-      touchMultiplier: 1.5,
-    });
-
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
 
   return (
     <div className={`transition-colors duration-700 ${bgColor}`}>

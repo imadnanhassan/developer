@@ -10,14 +10,18 @@ export const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Service", href: "/service" },
-  { name: "Case Study", href: "/case-study" },
+  { name: "Case Study", href: "/case-studies" },
 ];
 
 export const mobileNavLinks = [
-  { name: "Work", href: "/work", icon: <CreditCardIcon className="w-6 h-6" /> },
+  {
+    name: "Work",
+    href: "/case-studies",
+    icon: <CreditCardIcon className="w-6 h-6" />,
+  },
   {
     name: "Services",
-    href: "/services",
+    href: "/service",
     icon: <PuzzleIcon className="w-6 h-6" />,
   },
   { name: "Home", href: "/", icon: <SmileIcon className="w-8 h-8" /> },
