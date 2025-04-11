@@ -5,10 +5,12 @@ import About from "../pages/About";
 import Searvice from "@/pages/Searvice";
 import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
+import NotFound from "@/pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
+
     element: <RootLayout />,
     children: [
       {
@@ -33,6 +35,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { path: "*", element : <NotFound /> },
 ]);
 
 export default router;
