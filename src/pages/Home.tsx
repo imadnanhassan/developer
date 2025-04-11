@@ -10,6 +10,7 @@ import { SkillSection } from "@/components/section/HomePage/SkillSection";
 import PricingSection from "@/components/section/HomePage/PricingSection";
 import Testimonials from "@/components/section/HomePage/Testimonials";
 import ClientLogo from "@/components/section/HomePage/ClientLogo";
+import ContactSection from "@/components/section/HomePage/ContactSection";
 
 const Home: React.FC = () => {
   const [bgColor, setBgColor] = useState<string>("bg-black");
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
         </Section>
 
         <Section id="contact" color="bg-pink-800" onInView={setBgColor}>
-          <h1 className="text-white text-5xl">Contact Us</h1>
+         <ContactSection/>
         </Section>
       </div>
     </>
