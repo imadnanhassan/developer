@@ -62,7 +62,7 @@ export const SkillSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-left max-w-3xl mx-auto mb-16 z-10 relative"
+                className="text-left max-w-4xl mx-auto mb-16 z-10 relative"
               >
                 <p className="text-sm text-neutral-400 uppercase font-semibold">
                   My Skills

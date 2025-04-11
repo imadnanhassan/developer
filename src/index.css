@@ -1,5 +1,4 @@
 @import "tailwindcss";
-/* @import "tw-animate-css"; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -17,6 +16,7 @@
   --color-primary-400: oklch(0.84 0.18 117.33);
   --color-secondary-500: oklch(0.84 0.18 117.33);
   --color-secondary-600: oklch(0.84 0.18 117.33);
+  --font-body: "Space Grotesk", sans-serif;
   --primary: #c9f31c;
   --spacing: 0.25rem;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -154,6 +154,7 @@
     font-size: 18px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    font-family: "Space Grotesk", sans-serif;
   }
 
   .adnan_container {
@@ -168,6 +169,7 @@
     font-size: 16px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    font-family: "Space Grotesk", sans-serif;
   }
 
   .adnan_container {
@@ -182,6 +184,7 @@
     font-size: 15px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    font-family: "Space Grotesk", sans-serif;
   }
 
   .adnan_container {
@@ -196,6 +199,7 @@
     font-size: 14px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    font-family: "Space Grotesk", sans-serif;
   }
 
   .adnan_container {

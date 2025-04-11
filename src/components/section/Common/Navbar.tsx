@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
     <nav>
       <div
         className={cn(
-          "fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out",
+          "fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out font-body",
           scrolled
             ? "bg-white/20 backdrop-blur-lg shadow-lg px-4 md:px-28 "
             : "bg-transparent"
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
                 <Link
                   to={item.href}
                   className={cn(
-                    "text-white text-lg font-medium relative overflow-hidden transition-all duration-300",
+                    "text-white text-lg font-medium relative overflow-hidden transition-all duration-300 font-body",
                     "hover:text-[#C9F31C]",
                     "before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-[#C9F31C] before:transition-all before:duration-300 hover:before:w-full"
                   )}
