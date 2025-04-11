@@ -36,7 +36,7 @@ const BottomGradient = () => {
 const ContactSection = () => {
   return (
     <section className="bg-[#000] text-white lg:py-40 py-16 px-6 md:px-24">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <div className="adnan_container mx-auto grid md:grid-cols-2 lg:gap-16 gap-5 items-start">
         {/* Left Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -69,7 +69,7 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:gap-6 gap-3"
         >
           <div className="flex flex-col">
             <LabelInputContainer>
