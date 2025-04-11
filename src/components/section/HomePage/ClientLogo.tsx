@@ -33,7 +33,7 @@ const projects = [
 const ClientLogo: React.FC = () => {
   return (
     <div className="bg-[#0d0d0d]">
-      <div className="adnan_container mx-auto h-screen flex flex-col items-center justify-center gap-10">
+      <div className="adnan_container mx-auto  flex flex-col items-center justify-center gap-10 !py-40">
         <div className="max-w-6xl mx-auto text-center ">
           <p className="text-sm uppercase tracking-widest text-neutral-400">
             Clients Testimonials
