@@ -13,7 +13,6 @@ import { cn } from "@/lib/utils";
 export function Button({
   borderRadius = "1.75rem",
   children,
-  as: Component = "button",
   containerClassName,
   borderClassName,
   duration,
@@ -30,7 +29,7 @@ export function Button({
   [key: string]: unknown;
 }) {
   return (
-    <Component
+    <button
       className={cn(
         "relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl",
         containerClassName,
@@ -65,7 +64,7 @@ export function Button({
       >
         {children}
       </div>
-    </Component>
+    </button>
   );
 }
 
