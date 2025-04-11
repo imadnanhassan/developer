@@ -153,6 +153,7 @@
 @media (min-width: 1600px) {
   html {
     font-size: 18px;
+    scroll-behavior: smooth;
   }
 
   .adnan_container {
@@ -165,6 +166,7 @@
 @media (max-width: 1399px) {
   html {
     font-size: 16px;
+    scroll-behavior: smooth;
   }
 
   .adnan_container {
@@ -177,6 +179,7 @@
 @media (max-width: 1199px) {
   html {
     font-size: 15px;
+    scroll-behavior: smooth;
   }
 
   .adnan_container {
@@ -189,6 +192,7 @@
 @media (max-width: 991px) {
   html {
     font-size: 14px;
+    scroll-behavior: smooth;
   }
 
   .adnan_container {

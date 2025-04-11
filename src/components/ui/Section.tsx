@@ -6,9 +6,10 @@ interface SectionProps {
   color: string;
   onInView: (color: string) => void;
   children: React.ReactNode;
+  className?: string;
 }
 
-const Section = ({ id, color, onInView, children }: SectionProps) => {
+const Section = ({ id, color, onInView, children, className }: SectionProps) => {
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -21,7 +22,7 @@ const Section = ({ id, color, onInView, children }: SectionProps) => {
     <section
       id={id}
       ref={ref}
-      className=" transition-colors duration-500 z-10 "
+      className={`transition-colors duration-500 z-10 ${className || ""}`}
     >
       {children}
     </section>
