@@ -1,10 +1,6 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
-import lenis from "@/lib/lenis";
-
 
 export const ScrollToTopButton = () => {
   const [show, setShow] = useState(false);
@@ -18,7 +14,10 @@ export const ScrollToTopButton = () => {
   }, []);
 
   const scrollToTop = () => {
-    lenis.scrollTo(0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    });
   };
 
   return (
