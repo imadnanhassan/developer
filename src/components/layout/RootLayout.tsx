@@ -6,20 +6,22 @@ import { useState, useEffect } from "react";
 import Loader from "../ui/Loader";
 
 const RootLayout: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3000); 
-    return () => clearTimeout(timer); 
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 6000);
   }, []);
 
   return (
     <div className="w-full min-h-screen !bg-[#131313]">
-      {isLoading ? (
+      {!isLoaded ? (
         <Loader />
       ) : (
         <>
           <Navbar />
-          <main className=" w-full">
+          <main className="w-full">
             <Outlet />
           </main>
           <Footer />
