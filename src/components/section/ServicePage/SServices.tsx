@@ -15,11 +15,13 @@ const services = [
     skills: ["Theme Customize", "Development", "UI & UX Design"],
   },
   {
-    title: "SEARCH ENGINE OPTIMIZATION",
+    title: "SEO OPTIMIZATION",
     description:
-      "I optimize Wix and Webflow sites for search engines, tackling meta structure, speed improvements, heading hierarchy, and on-page strategies. Even with visual builders, I apply solid SEO foundations that improve visibility without compromising design.",
-    skills: ["Technical SEO", "On-Page", "Link Building"],
+      "I build custom WordPress websites tailored to specific business needs — optimized for speed, mobile responsiveness, and SEO. From theme customization to plugin configuration and performance tuning, I deliver solutions that empower clients to manage their content with confidence and clarity.",
+    skills: ["Theme Customize", "Development", "UI & UX Design"],
   },
+    
+    
 ];
 const SServices = () => {
   return (
