@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/section/Common/Breadcrumb";
+import ServiceHero from "@/components/section/ServicePage/ServiceHero";
 import AnimatedLines from "@/components/ui/AnimatedLines";
 import React from "react";
 
@@ -9,9 +10,7 @@ const Searvice:React.FC = () => {
         <Breadcrumb />
       </div>
       <AnimatedLines />
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold text-white">Searvice</h1>
-      </div>
+      <ServiceHero/>
     </div>
   );
 };
