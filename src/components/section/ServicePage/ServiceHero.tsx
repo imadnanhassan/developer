@@ -16,34 +16,34 @@ const ServiceHero: React.FC = () => {
           >
             <TextReveal text="* INTRODUCTION OF MYSELF" />
           </motion.p>
-          <h1 className="text-2xl md:text-3xl font-bold leading-tight inline-block">
+          <div className="text-md md:text-3xl font-bold leading-tight inline-block">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               className="leading-tight inline-block"
             >
-              <TextReveal text="i’m a" className="leading-tight inline-block" />
+              <TextReveal text="i’m a" className="leading-tight inline-block " />
               <TextReveal
                 text="web developer"
                 className="leading-tight inline-block text-[#C9F31C]"
               />
-              <TextReveal text="and" className="leading-tight inline-block" />
+              <TextReveal text="and" className="leading-tight inline-block " />
               <TextReveal
                 text="digital products"
-                className="leading-tight inline-block text-[#C9F31C]"
+                className="leading-tight inline-block text-[#C9F31C] "
               />{" "}
               <br />
               <TextReveal
                 text="problem solutions"
-                className="leading-tight inline-block"
+                className="leading-tight inline-block "
               />
               <TextReveal
                 text="to people through"
-                className="leading-tight inline-block"
+                className="leading-tight inline-block "
               />
             </motion.h1>
-          </h1>
+          </div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

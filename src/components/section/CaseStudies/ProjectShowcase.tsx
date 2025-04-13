@@ -37,11 +37,10 @@ export default function ProjectShowcase() {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="w-full flex adnan_container !py-40">
+    <div className="w-full lg:flex  adnan_container !py-40">
       {/* Sidebar */}
-      <aside className="w-64 p-6 text-white rounded-lg shadow-lg flex-shrink-0">
-        
-        <ul className="space-y-2">
+      <aside className="lg:w-64 w-full p-6 text-white rounded-lg shadow-lg flex-shrink-0">
+        <ul className="space-y-2 ">
           {categories.map((cat) => (
             <li
               key={cat}
@@ -74,6 +73,7 @@ export default function ProjectShowcase() {
                   rotateY: 10, // pseudo 3D effect horizontally
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                loading="lazy"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-white">

@@ -1,4 +1,7 @@
 import Breadcrumb from "@/components/section/Common/Breadcrumb";
+import ExperienceSection from "@/components/section/HomePage/ExperienceSection";
+import { SkillSection } from "@/components/section/HomePage/SkillSection";
+import ServiceHero from "@/components/section/ServicePage/ServiceHero";
 import AnimatedLines from "@/components/ui/AnimatedLines";
 
 const About: React.FC = () => {
@@ -9,8 +12,10 @@ const About: React.FC = () => {
           <Breadcrumb />
         </div>
         <AnimatedLines />
-        <div className="flex items-center justify-center h-screen">
-          <h1 className="text-4xl font-bold text-white">About Us</h1>
+        <div >
+          <ServiceHero />
+          <ExperienceSection />
+           <SkillSection />
         </div>
       </div>
     </>
