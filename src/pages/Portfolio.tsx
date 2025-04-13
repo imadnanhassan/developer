@@ -1,3 +1,4 @@
+import ProjectShowcase from "@/components/section/CaseStudies/ProjectShowcase";
 import Breadcrumb from "@/components/section/Common/Breadcrumb";
 import AnimatedLines from "@/components/ui/AnimatedLines";
 import React from "react";
@@ -9,8 +10,8 @@ const Portfolio: React.FC = () => {
         <Breadcrumb />
       </div>
       <AnimatedLines />
-      <div className="flex items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold text-white">Portfolio</h1>
+      <div className="flex items-center justify-center ">
+        <ProjectShowcase />
       </div>
     </div>
   );
