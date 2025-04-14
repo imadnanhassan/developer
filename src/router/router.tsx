@@ -6,6 +6,8 @@ import Searvice from "@/pages/Searvice";
 import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
+import DashboardLayout from "@/components/layout/DashboardLayout";
+import Dashboard from "@/pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +37,13 @@ const router = createBrowserRouter([
       },
     ],
   },
-  { path: "*", element : <NotFound /> },
+
+  {
+    path: "/admin",
+    element: <DashboardLayout />,
+    children: [{ path: ``, element: <Dashboard /> }],
+  },
+  { path: "*", element: <NotFound /> },
 ]);
 
 export default router;

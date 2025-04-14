@@ -1,3 +1,4 @@
+import { images } from "@/assets/images/images";
 import { mobileNavLinks, navLinks } from "@/data/navLinks";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -42,11 +43,7 @@ const Navbar: React.FC = () => {
               className="text-2xl font-bold text-white tracking-wider select-none"
             >
               {/* <span className="text-primary-900">Adnan</span>Hassan */}
-              <img
-                src="https://codehaven.io/wp-content/uploads/2024/03/adnan-hassan.png"
-                alt=""
-                className="h-full w-[150px] "
-              />
+              <img src={images.logo} alt="" className="h-full w-[150px] " />
             </Link>
           </motion.div>
 

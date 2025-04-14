@@ -4,6 +4,7 @@ import TooltipWord from "@/components/ui/TooltipWord";
 import StatsSection from "@/components/ui/StatsSection";
 import { motion } from "framer-motion";
 import TextReveal from "@/components/ui/TextReveal";
+import { images } from "../../../assets/images/images";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -88,7 +89,7 @@ const HeroSection: React.FC = () => {
             >
               <div className="relative hidden sm:block w-[200px] md:w-[300px] lg:w-[400px] 2xl:w-[500px] h-[250px] md:h-[400px] lg:h-[500px] 2xl:h-[650px] rounded-b-[200px] overflow-hidden">
                 <img
-                  src="https://codehaven.io/wp-content/uploads/2024/03/adnan-hassan.jpg"
+                  src={images.heroImage}
                   alt="Adnan Hassan"
                   className="w-full h-full object-cover grayscale bg-transparent"
                 />
