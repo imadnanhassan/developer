@@ -4,9 +4,15 @@ import "./index.css";
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./router/router.tsx";
+import { store } from "./redux/store.ts";
+import { Provider } from "react-redux";
+import { Toaster } from "sonner";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
+    <Provider store={store}>
+      <Toaster />
+      <RouterProvider router={router} />
+    </Provider>
+  </StrictMode>
 );

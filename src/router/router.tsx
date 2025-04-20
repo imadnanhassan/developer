@@ -7,7 +7,10 @@ import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import DashboardLayout from "@/components/layout/DashboardLayout";
-import Dashboard from "@/pages/Dashboard";
+import Dashboard from "@/pages/Dashboard/Dashboard";
+import CreateClients from "@/pages/Dashboard/CreateClients";
+import { ClientsLogo } from "@/pages/Dashboard/ClientsLogo";
+
 
 const router = createBrowserRouter([
   {
@@ -41,7 +44,11 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <DashboardLayout />,
-    children: [{ path: ``, element: <Dashboard /> }],
+    children: [
+      { path: "/admin", element: <Dashboard /> },
+      { path: "/admin/clients/add", element: <CreateClients /> },
+      { path: "/admin/clients", element: <ClientsLogo /> },
+    ],
   },
   { path: "*", element: <NotFound /> },
 ]);
