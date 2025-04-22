@@ -9,7 +9,9 @@ import NotFound from "@/pages/NotFound";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import Dashboard from "@/pages/Dashboard/Dashboard";
 import CreateClients from "@/pages/Dashboard/CreateClients";
-import { ClientsLogo } from "@/pages/Dashboard/ClientsLogo";
+import PortfolioClientLogo from "@/pages/Dashboard/PortfolioClientLogo";
+
+
 
 
 const router = createBrowserRouter([
@@ -47,7 +49,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/admin", element: <Dashboard /> },
       { path: "/admin/clients/add", element: <CreateClients /> },
-      { path: "/admin/clients", element: <ClientsLogo /> },
+      { path: "/admin/clients", element: <PortfolioClientLogo /> },
     ],
   },
   { path: "*", element: <NotFound /> },

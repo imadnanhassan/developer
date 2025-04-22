@@ -2,6 +2,12 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { useGetClientLogosQuery } from "@/redux/features/ClientLogo";
 import React from "react";
 
+export interface ClientLogo {
+  image: string;
+  link: string;
+  title?: string;
+}
+
 const ClientLogo: React.FC = () => {
   const { data: clientLogo } = useGetClientLogosQuery(undefined);
   console.log(clientLogo, "clientLogo");

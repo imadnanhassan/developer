@@ -9,6 +9,7 @@ type UpdateClientLogoPayload = {
   _id?: string;
   name?: string;
   image?: string;
+  link?: string;
 };
 
 export const clientLogoApi = baseApi.injectEndpoints({
