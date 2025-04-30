@@ -1,8 +1,49 @@
+import {
+  useDeleteClientLogoMutation,
+  useGetClientLogosQuery,
+} from "@/redux/features/ClientLogo";
 import { EditIcon, SearchIcon, Trash } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
+
+interface ClientLogo {
+  _id: string;
+  name: string;
+  image: string;
+  link: string;
+}
 
 const PortfolioClientLogo: React.FC = () => {
+  const { data } = useGetClientLogosQuery(undefined, {
+    refetchOnFocus: true,
+    refetchOnReconnect: true,
+  });
+
+  const [deleteClientLogo, { isLoading: deleteLoading }] =
+    useDeleteClientLogoMutation();
+
+  const handleDelete = async (id: string) => {
+    const confirm = window.confirm(
+      "Are you sure you want to delete this logo?"
+    );
+    if (!confirm) return;
+
+    toast.loading("Deleting logo... please wait", { id: "delete-logo" });
+
+    try {
+      await deleteClientLogo(id).unwrap();
+      toast.success("Logo deleted successfully!", { id: "delete-logo" });
+    } catch (error: unknown) {
+      toast.error("Failed to delete logo. Try again.", { id: "delete-logo" });
+      if (error instanceof Error) {
+        console.error(error.message);
+      } else {
+        console.error("An unknown error occurred.");
+      }
+    }
+  };
+
   return (
     <div className="adnan_container mx-auto">
       <div className="flex flex-col">
@@ -75,38 +116,56 @@ const PortfolioClientLogo: React.FC = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-300 ">
-                  <tr className="bg-white transition-all duration-500 hover:bg-gray-50">
-                    <td className="p-5 whitespace-nowrap text-sm leading-6 font-medium text-gray-900 ">
-                      Louis Vuitton
-                    </td>
-                    <td className="p-5 whitespace-nowrap text-sm leading-6 font-medium text-gray-900 ">
-                      <a
-                        href="https://www.louisvuitton.com"
-                        className="text-indigo-500 hover:text-indigo-600"
-                      >
-                        https://www.louisvuitton.com
-                      </a>
-                    </td>
+                <tbody className="divide-y divide-gray-300">
+                  {(data as ClientLogo[])?.map((logo: ClientLogo) => (
+                    <tr
+                      key={logo._id}
+                      className="bg-white transition-all duration-500 hover:bg-gray-50"
+                    >
+                      {/* Name */}
+                      <td className="p-5 whitespace-nowrap text-sm leading-6 font-medium text-gray-900">
+                        {logo.name}
+                      </td>
 
-                    <td className="p-5 whitespace-nowrap text-sm leading-6 font-medium text-gray-900">
-                      <img
-                        src="https://www.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton--louis-vuitton-monogram-giant-hooded-sweatshirt--M1A0W2X4E3E2.jpg?wid=600&hei=600&fmt=jpeg"
-                        alt="Louis Vuitton"
-                        className="w-16 h-16 rounded-full"
-                      />
-                    </td>
-                    <td className=" p-5 ">
-                      <div className="flex items-center gap-1">
-                        <button className="p-2  rounded-full  group transition-all duration-500  flex item-center">
-                          <EditIcon className="text-indigo-500" />
-                        </button>
-                        <button className="p-2 rounded-full  group transition-all duration-500  flex item-center">
-                          <Trash className="text-red-500" />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
+                      {/* Website Link */}
+                      <td className="p-5 whitespace-nowrap text-sm leading-6 font-medium text-gray-900">
+                        <a
+                          href={logo.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-indigo-500 hover:text-indigo-600"
+                        >
+                          {logo.link}
+                        </a>
+                      </td>
+
+                      {/* Image */}
+                      <td className="p-5 whitespace-nowrap text-sm leading-6 font-medium text-gray-900">
+                        <img
+                          src={logo.image}
+                          alt={logo.name}
+                          className="w-16 h-16 rounded-full object-cover"
+                        />
+                      </td>
+
+                      {/* Actions */}
+                      <td className="p-5">
+                        <div className="flex items-center gap-1">
+                          <button className="p-2 rounded-full group transition-all duration-500 flex items-center">
+                            <EditIcon className="text-indigo-500" />
+                          </button>
+                          <button
+                            onClick={() => handleDelete(logo._id)}
+                            disabled={deleteLoading}
+                            aria-label="Delete"
+                            className="p-2 rounded-full group transition-all duration-500 flex items-center cursor-pointer hover:bg-red-100 hover:text-red-500"
+                          >
+                            <Trash className="text-red-500" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
