@@ -95,7 +95,7 @@ const tabsData: TabData[] = [
       {
         title: "Basic WordPress",
         subtitle: "(One-Time Payment)",
-        price: "$200",
+        price: "$250",
         features: [
           "Custom WordPress Website (up to 5 pages)",
           "Blog Setup",
@@ -107,7 +107,7 @@ const tabsData: TabData[] = [
       {
         title: "Combo Package",
         subtitle: "(SEO + WordPress)",
-        price: "$250",
+        price: "$350",
         features: [
           "Fully Custom WordPress Website (up to 10 pages)",
           "Ecommerce or Blog Setup",

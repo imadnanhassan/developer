@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExperienceCard } from "./ExperienceCard";
+import { images } from "@/assets/images/images";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -20,7 +21,7 @@ const ExperienceSection = () => {
         >
           <div className="w-80 h-80 rounded-full bg-[#1a1a1a] flex items-center justify-center border border-[#2a2a2a]">
             <img
-              src="https://codehaven.io/wp-content/uploads/2024/03/dev-hassan.png"
+              src={images.logoIcon}
               alt="Logo"
               width={300}
               height={300}

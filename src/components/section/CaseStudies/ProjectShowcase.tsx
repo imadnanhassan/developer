@@ -1,27 +1,63 @@
+import { images } from "@/assets/images/images";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Sample projects
 const projects = [
   {
-    title: "Triply: Plan, Book, Travel",
-    img: "https://codehaven.io/wp-content/uploads/2024/11/Minimalist-Neutral-Multi-Device-Computer-Mockup-Website-Launch-Instagram-Post7-1024x1024.jpg",
-    category: "Travel",
+    title: "Popular Car Wash Detailing",
+    link: "https://popularcarwashdetailing.com/",
+    thumbnail: images.popularCarWash,
+    category: "Web Development",
   },
   {
-    title: "Plate – Ultimate Restaurant Booking App with Stunning UI/UX",
-    img: "https://codehaven.io/wp-content/uploads/2024/11/Minimalist-Neutral-Multi-Device-Computer-Mockup-Website-Launch-Instagram-Post-1024x1024.jpg",
-    category: "Restaurant",
+    title: "Beat Retreat",
+    link: "https://beatretreatdr.com/",
+    thumbnail: images.beatRetreat,
+    category: "Web Development",
   },
   {
-    title: "Affine",
-    img: "https://codehaven.io/wp-content/uploads/2024/11/Minimalist-Neutral-Multi-Device-Computer-Mockup-Website-Launch-Instagram-Post-6-1024x1024.jpg",
-    category: "SaaS",
+    title: "Hustle Hopper",
+    link: "https://hustlehopper.com/",
+    thumbnail: images.hustleHopper,
+    category: "Web Development",
   },
   {
-    title: "Carnesia",
-    img: "https://codehaven.io/wp-content/uploads/2024/11/Minimalist-Neutral-Multi-Device-Computer-Mockup-Website-Launch-Instagram-Post-5-1024x1024.jpg",
-    category: "E-Commerce",
+    title: "Iwt Canada",
+    link: "https://iwtcanada.com/",
+    thumbnail: images.iwtCanada,
+    category: "Web Development",
+  },
+  {
+    title: "Popular Car Wash Detailing",
+    link: "https://popularcarwashdetailing.com/",
+    thumbnail: images.popularCarWash,
+    category: "Web Development",
+  },
+  {
+    title: "Trust and fast Consultancy",
+    link: "https://tfcedubd.com/",
+    thumbnail: images.tfceduBD,
+    category: "Web Development",
+  },
+  {
+    title: "Moving Company.com.bd",
+    link: "https://movingcompany.com.bd/",
+    thumbnail: images.movingcompany,
+    category: "Web Development",
+  },
+  {
+    title: "Beauty Adore",
+    link: "https://beautyadore.xyz/",
+    thumbnail: images.beautyadore,
+    category: "WordPress",
+  },
+  {
+    title: "Umamas",
+    link: "https://umamas.com/",
+    thumbnail: images.umamas,
+    category: "Web Development",
   },
 ];
 
@@ -63,18 +99,20 @@ export default function ProjectShowcase() {
               key={idx}
               className="rounded-lg overflow-hidden shadow-lg cursor-pointer group relative bg-[#C9F31C]/10"
             >
-              <motion.img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-96 object-cover group-hover:brightness-90 duration-300"
-                whileHover={{
-                  scale: 1.05,
-                  rotate: 3, // slight twist for that elegant drama
-                  rotateY: 10, // pseudo 3D effect horizontally
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-                loading="lazy"
-              />
+              <Link to={project.link} target="_blank" rel="noopener noreferrer">
+                <motion.img
+                  src={project.thumbnail}
+                  alt={project.title}
+                  className="w-full h-96 object-cover group-hover:brightness-90 duration-300"
+                  whileHover={{
+                    scale: 1.05,
+                    rotate: 3, // slight twist for that elegant drama
+                    rotateY: 10, // pseudo 3D effect horizontally
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  loading="lazy"
+                />
+              </Link>
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-white">
                   {project.title}

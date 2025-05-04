@@ -1,45 +1,46 @@
+import { images } from "@/assets/images/images";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { motion } from "framer-motion";
 
 const skills = [
   {
     name: "MongoDB",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/mongodb.png",
+    icon: images.mongodb,
     percent: 90,
   },
   {
     name: "React JS",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/React-icon.svg_.png",
+    icon: images.react,
     percent: 90,
   },
   {
     name: "Next JS",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/1684410508-image-7.png",
+    icon: images.next,
     percent: 85,
   },
   {
     name: "TypeScript",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/1684410508-image-7.png",
+    icon: images.ts,
     percent: 88,
   },
   {
     name: "SEO",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/5.png",
+    icon: images.seo,
     percent: 95,
   },
   {
     name: "WordPress",
-    icon: "https://codehaven.io/wp-content/uploads/2023/11/skill4.png",
+    icon: images.wordpress,
     percent: 95,
   },
   {
     name: "Semrush",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/4.png",
-    percent: 62,
+    icon: images.semrush,
+    percent: 70,
   },
   {
     name: "Local SEO",
-    icon: "https://codehaven.io/wp-content/uploads/2024/03/7.png",
+    icon: images.localSEO,
     percent: 94,
   },
 ];
@@ -51,7 +52,7 @@ export const SkillSection = () => {
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6 }}
         >
           <section className="bg-[#070707] rounded h-full  text-white py-40 px-4  ">
             <div className=" absolute inset-0 bg-gradient-radial from-[#c9f31c22] via-[#00000088] to-[#000000] opacity-20 pointer-events-none" />

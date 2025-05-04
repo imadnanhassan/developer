@@ -1,8 +1,11 @@
+import { images } from "@/assets/images/images";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-[#0a0a0a] text-white pt-16 px-6 md:px-24">
       <motion.div
@@ -24,8 +27,8 @@ const Footer = () => {
             >
               {/* <span className="text-primary-900">Adnan</span>Hassan */}
               <img
-                src="https://codehaven.io/wp-content/uploads/2024/03/adnan-hassan.png"
-                alt=""
+                src={images.logo}
+                alt="Adnan Hassan"
                 className="h-full w-[150px] "
               />
             </Link>
@@ -91,7 +94,7 @@ const Footer = () => {
       {/* Bottom Footer */}
       <div className="adnan_container mx-auto lg:py-6 py-20 flex flex-col md:flex-row items-center justify-between text-sm text-zinc-500">
         <p className="mb-2 md:mb-0">
-          Copyright ©2024, Adnan Hassan All Rights Reserved
+          Copyright © {year}, Adnan Hassan All Rights Reserved
         </p>
         <div className="flex gap-4">
           <a href="#" className="hover:text-white transition">
