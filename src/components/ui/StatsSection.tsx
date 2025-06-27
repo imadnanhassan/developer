@@ -53,8 +53,8 @@ const StatCard = ({
 const StatsSection = () => {
   return (
     <div className=" flex flex-wrap justify-center lg:justify-end gap-6 mt-10 lg:mt-0 w-full max-w-3xl ">
-      <StatCard target={5} label="Years of Experience" suffix="+" delay={0.2} />
-      <StatCard target={50} label="Projects Completed" suffix="+" delay={0.4} />
+      <StatCard target={8} label="Years of Experience" suffix="+" delay={0.2} />
+      <StatCard target={500} label="Projects Completed" suffix="+" delay={0.4} />
       <StatCard
         target={98}
         label="Client Satisfaction"
