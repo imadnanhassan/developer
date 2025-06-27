@@ -52,7 +52,7 @@ const AboutSection: React.FC = () => {
               />
               <div>
                 <p className="text-sm text-gray-400">Email Us</p>
-                <p className="text-white">abulhassan.dev@gmail.com</p>
+                <p className="text-white">dev.adnanhassan@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-2 w-full">
